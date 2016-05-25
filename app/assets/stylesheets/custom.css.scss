@@ -1,0 +1,42 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/* universal */
+
+body {
+  padding-top: 60px;
+  background-color: #CDDC39;
+  background-image: image-url('beach.jpg');
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
+/* Body */
+
+ul {
+	background-color: #90C3D4;
+}
+
+.navbar-right li {
+	color: #ffffff;
+}
+.navbar-inverse {
+	background-color: #f4511e;
+}
+.btn-default {
+	background-color: #CDDC39;
+}
