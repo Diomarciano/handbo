@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  def new
+def new
   @user = User.new
 end
 
@@ -10,4 +10,5 @@ def create
   else
     render "new"
   end
+end
 end
