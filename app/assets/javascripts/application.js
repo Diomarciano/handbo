@@ -16,11 +16,9 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$(document).ready(function() {
-  $('.has-tooltip').tooltip();
-  $('.has-popover').popover({
-    trigger: 'hover'
-  });
-});
 
+$('#myDropdown').on('show.bs.dropdown', function () {
+  // do something…
+  $('.dropdown-toggle').dropdown()
+})
 
