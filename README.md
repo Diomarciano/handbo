@@ -47,6 +47,7 @@ gunakan bundle install dan jangan lupa migrasi database dgn menggunakan bundle e
 ### Contribution guidelines ###
 
 * Writing tests
+ketika smua sdh selesai ketik *rails server*
 * Code review
 * Other guidelines
 
