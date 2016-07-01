@@ -16,37 +16,16 @@ Halo, ini spesifikasi software yg kita pakai
 * Dependencies
 * Database configuration
 
-Setting database masuk ke file config/database.yml
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-
-development:
-  <<: *default
-  database: db/development.sqlite3
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
-
-production:
-  <<: *default
-  database: db/production.sqlite3
-
-
 
 * How to run tests
-gunakan bundle install dan jangan lupa migrasi database dgn menggunakan bundle exec rake db:migrate buat migrate
+ketik **bundle install** setelah ok database di migrasi dgn **bundle exec rake db:migrate** dan terakhir **rails server**
 
 * Deployment instructions
 
 ### Contribution guidelines ###
 
 * Writing tests
+
 ketika smua sdh selesai ketik *rails server*
 * Code review
 * Other guidelines
