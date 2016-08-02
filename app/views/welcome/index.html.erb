@@ -19,13 +19,39 @@
           <a id="register-tab" href="#" aria-label="Registration form" role="tab" aria-controls="registration-form" aria-selected="false">Register</a>
         </li>
         <li class="active" role="presentation">
-          <a id="sign-in-tab" href="#" aria-label="Sign In Form" role="tab" aria-controls="signin-form" aria-selected="true">Sign in</a>
+          <a id="sign-in-tab" href="#" aria-label="Sign In Form" role="tab" aria-controls="signin-form" data-toggle="modal" data-target="#myModal" aria-selected="true">Sign in</a>
           </li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3"/>
+        </div>
+        <br>
+        <div class="input-group input-group-sm">
+         <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon3">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container text-center">
   <div class="row">
