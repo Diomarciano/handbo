@@ -1,7 +1,13 @@
-<html ng-app="spicyApp2">
+<html ng-app="spicyApp1">
 <head>
 </head>
 <body>
+<div ng-controller="SpicyController">
+ <button ng-click="chiliSpicy()">Chili</button>
+ <button ng-click="jalapenoSpicy()">Jalapeño</button>
+ <p>The food is {{spice}} spicy!</p>
+</div>
+
   
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
