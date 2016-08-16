@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :weight_classes
+  resources :length_classes
+  resources :products
   get 'blog/index'
 
   resources :categories

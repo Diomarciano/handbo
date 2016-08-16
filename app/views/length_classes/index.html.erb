@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Length Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Length class</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @length_classes.each do |length_class| %>
+      <tr>
+        <td><%= length_class.length_class_id %></td>
+        <td><%= length_class.value %></td>
+        <td><%= link_to 'Show', length_class %></td>
+        <td><%= link_to 'Edit', edit_length_class_path(length_class) %></td>
+        <td><%= link_to 'Destroy', length_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Length class', new_length_class_path %>

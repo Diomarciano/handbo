@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801095552) do
+ActiveRecord::Schema.define(version: 20160816090001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 20160801095552) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "category_paths", id: false, force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "path_id"
+    t.integer  "level"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer  "post_id"
     t.text     "text"
@@ -45,6 +53,13 @@ ActiveRecord::Schema.define(version: 20160801095552) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "length_classes", force: :cascade do |t|
+    t.integer  "length_class_id"
+    t.decimal  "value"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
@@ -52,10 +67,35 @@ ActiveRecord::Schema.define(version: 20160801095552) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", primary_key: "product_id", force: :cascade do |t|
+    t.string   "sku"
+    t.integer  "quantity"
+    t.string   "image"
+    t.decimal  "price"
+    t.integer  "shipping"
+    t.decimal  "weight"
+    t.integer  "weight_class_id"
+    t.decimal  "length"
+    t.decimal  "width"
+    t.decimal  "height"
+    t.string   "length_class_id"
+    t.integer  "status"
+    t.integer  "viewed"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "subscribes", force: :cascade do |t|
     t.text     "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "weight_classes", id: false, force: :cascade do |t|
+    t.integer  "weight_class_id"
+    t.decimal  "value"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
