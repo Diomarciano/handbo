@@ -5,7 +5,8 @@ $(document).ready(function() {
     $("#testID p").each(function (i) {
         i++;
         if(i == cutCount) {
-            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>')   
+            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>') 
+            
         }
         if(i > cutCount) {
            $(this).hide();

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   get 'blog/index'
 
   resources :categories
@@ -26,8 +27,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #root 'pages#home'
-  #root 'welcome#index'
-  root 'blog#index'
+  root 'welcome#index'
+  #root 'blog#index'
 
   #root 'todos#index'
 
