@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :books
+=======
+  resources :weight_classes
+  resources :length_classes
+  resources :products
+>>>>>>> cda39ce0f0fa5831fabe6770d80c54b8dc5e0744
   get 'blog/index'
 
   resources :categories

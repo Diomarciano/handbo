@@ -1,0 +1,25 @@
+<%= form_for(@length_class) do |f| %>
+  <% if @length_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@length_class.errors.count, "error") %> prohibited this length_class from being saved:</h2>
+
+      <ul>
+      <% @length_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :length_class_id %><br>
+    <%= f.number_field :length_class_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
