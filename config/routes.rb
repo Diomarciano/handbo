@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+  get 'blog/index'
+
+  get 'pages/home'
+
+  get 'pages/blog'
+>>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
 
   resources :books
 
@@ -32,6 +40,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #root 'pages#home'
+<<<<<<< HEAD
 
   #root 'welcome#index'
   root 'blog#index'
@@ -39,6 +48,9 @@ Rails.application.routes.draw do
   #root 'welcome#index'
   #root 'blog#index'
 
+=======
+  root 'blog#index'
+>>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
 
   #root 'todos#index'
 
