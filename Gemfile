@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 #Gem for bootstrap and autoprefixer
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
-gem 'sqlite3', '~> 1.3', '>= 1.3.12'
+
 
 #Gem for angularJs
 gem 'angularjs-rails', '~> 1.5', '>= 1.5.5'
@@ -55,6 +55,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails', '~> 3.0'
+  gem 'sqlite3', '~> 1.3', '>= 1.3.12'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
