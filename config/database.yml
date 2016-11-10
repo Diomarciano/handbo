@@ -81,19 +81,12 @@ development:
 test:
   <<: *default
   #database: goapp_test
-<<<<<<< HEAD
 
-=======
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
   #database: goapp
   #username: pguser
   #password: 123456
   database: db/test.sqlite3
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -116,10 +109,7 @@ test:
 #
 production:
   <<: *default
-<<<<<<< HEAD
 
-=======
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
   #database: goapp_production
   #username: goapp
   #password: <%= ENV['GOAPP_DATABASE_PASSWORD'] %>
