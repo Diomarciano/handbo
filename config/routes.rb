@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blog/index'
+
   get 'pages/home'
 
   get 'pages/blog'
@@ -31,7 +33,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  root 'pages#home'
+  #root 'pages#home'
+  root 'blog#index'
 
   #root 'todos#index'
 
