@@ -15,20 +15,24 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  #adapter: postgresql
+  #encoding: unicode
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
   #database: goapp
   #username : username
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  
 
 development:
   <<: *default
   #database: goapp_development
-  database: goapp
-  username: pguser
-  password: 123456
+  #database: goapp
+  #username: pguser
+  #password: 123456
+  database: db/development.sqlite3
   
 
   # The specified database role being used to connect to postgres.
@@ -64,9 +68,10 @@ development:
 test:
   <<: *default
   #database: goapp_test
-  database: goapp
-  username: pguser
-  password: 123456
+  #database: goapp
+  #username: pguser
+  #password: 123456
+  database: db/test.sqlite3
   
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -90,9 +95,10 @@ test:
 #
 production:
   <<: *default
-  database: goapp_production
-  username: goapp
-  password: <%= ENV['GOAPP_DATABASE_PASSWORD'] %>
+  #database: goapp_production
+  #username: goapp
+  #password: <%= ENV['GOAPP_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
   #database: rails_myapp
   #username: rails_myapp_user
   #password: pwd

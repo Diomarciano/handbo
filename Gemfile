@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 #Gem for bootstrap and autoprefixer
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'sqlite3', '~> 1.3', '>= 1.3.12'
 
 #Gem for angularJs
 gem 'angularjs-rails', '~> 1.5', '>= 1.5.5'
