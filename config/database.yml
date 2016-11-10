@@ -15,30 +15,28 @@
 # gem 'pg'
 #
 default: &default
-<<<<<<< HEAD
+
 
   #adapter: postgresql
   #encoding: unicode
   adapter: sqlite3
   pool: 5
   timeout: 5000
-=======
+
   #adapter: postgresql
   #encoding: unicode
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
+
   #database: goapp
   #username : username
 
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-<<<<<<< HEAD
-  
-=======
+
   #pool: 5
   adapter: sqlite3
   pool: 5
   timeout: 5000
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
+
 
 development:
   <<: *default
@@ -48,11 +46,7 @@ development:
   #username: pguser
   #password: 123456
   database: db/development.sqlite3
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
