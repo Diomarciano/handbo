@@ -1,9 +1,9 @@
-<html ng-app="spicyApp2">
+<html ng-app="spicyApp1">
 <head>
 </head>
 <body>
-  
-<nav class="navbar navbar-inverse">
+
+  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,7 +19,7 @@
           <a id="register-tab" href="#" aria-label="Registration form" role="tab" aria-controls="registration-form" aria-selected="false">Register</a>
         </li>
         <li class="active" role="presentation">
-          <a id="sign-in-tab" href="#" aria-label="Sign In Form" role="tab" aria-controls="signin-form" data-toggle="modal" data-target="#myModal" aria-selected="true">Sign in</a>
+          <a id="sign-in-tab" href="#" aria-label="Sign In Form" role="tab" aria-controls="signin-form" data-toggle="modal" data-target="#myModal" aria-selected="true" role="button">Sign in</a>
           </li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
@@ -46,6 +46,8 @@
         <button class="btn btn-google-plus"><i class="fa fa-google-plus"></i>  Sign In with Google</button>
         <br>
       </br>
+      <hr>
+  
         <div class="input-group input-group-sm">
           <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3"/>
         </div>
@@ -56,7 +58,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Sign In</button>
       </div>
     </div>
   </div>
@@ -134,10 +136,6 @@
     <input type="email" class="form-control" size="50" placeholder="Email Address">
     <button type="button" class="btn btn-danger">Sign Up</button>
   </form>
-</footer>
-
-<footer class="container">
-  <p><a href="#">Blog</a></p>
 </footer>
 
 </body>

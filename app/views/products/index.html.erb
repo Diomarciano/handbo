@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Sku</th>
+      <th>Quantity</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Shipping</th>
+      <th>Weight</th>
+      <th>Weight class</th>
+      <th>Length</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Length class</th>
+      <th>Status</th>
+      <th>Viewed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.product_id %></td>
+        <td><%= product.sku %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.image %></td>
+        <td><%= product.price %></td>
+        <td><%= product.shipping %></td>
+        <td><%= product.weight %></td>
+        <td><%= product.weight_class_id %></td>
+        <td><%= product.length %></td>
+        <td><%= product.width %></td>
+        <td><%= product.height %></td>
+        <td><%= product.length_class_id %></td>
+        <td><%= product.status %></td>
+        <td><%= product.viewed %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

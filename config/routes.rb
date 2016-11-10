@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  resources :books
+=======
+  resources :weight_classes
+  resources :length_classes
+  resources :products
+>>>>>>> cda39ce0f0fa5831fabe6770d80c54b8dc5e0744
+>>>>>>> ba975004136ec626c19b616450253efe665f451c
   get 'blog/index'
 
   resources :categories
@@ -26,8 +36,13 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   #root 'pages#home'
+<<<<<<< HEAD
   #root 'welcome#index'
   root 'blog#index'
+=======
+  root 'welcome#index'
+  #root 'blog#index'
+>>>>>>> ba975004136ec626c19b616450253efe665f451c
 
   #root 'todos#index'
 

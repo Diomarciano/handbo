@@ -1,0 +1,25 @@
+<%= form_for(@weight_class) do |f| %>
+  <% if @weight_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weight_class.errors.count, "error") %> prohibited this weight_class from being saved:</h2>
+
+      <ul>
+      <% @weight_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight_class_id %><br>
+    <%= f.number_field :weight_class_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
