@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160816090001) do
-=======
-ActiveRecord::Schema.define(version: 20160519093505) do
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
+ActiveRecord::Schema.define(version: 20161114115923) do
 
   create_table "blogs", force: :cascade do |t|
     t.text     "title"
@@ -75,7 +71,6 @@ ActiveRecord::Schema.define(version: 20160519093505) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "products", primary_key: "product_id", force: :cascade do |t|
     t.string   "sku"
     t.integer  "quantity"
@@ -100,19 +95,19 @@ ActiveRecord::Schema.define(version: 20160519093505) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "weight_classes", id: false, force: :cascade do |t|
     t.integer  "weight_class_id"
     t.decimal  "value"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-=======
-  create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
->>>>>>> 9e9690cc102c177e042725a1a90087345a7790c4
   end
 
 end

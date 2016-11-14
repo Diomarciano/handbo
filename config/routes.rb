@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   get 'blog/index'
 
   get 'pages/home'
