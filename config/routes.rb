@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :users
   get 'blog/index'
+  get 'blog/artikel1'
+  get 'blog/artikel2'
 
   get 'pages/home'
 
@@ -43,12 +45,12 @@ Rails.application.routes.draw do
 
 
   #root 'welcome#index'
-  #root 'blog#index'
+  root 'blog#index'
 
   #root 'welcome#index'
   #root 'blog#index'
 
-  root 'blog#index'
+  #root 'blog#index'
 
 
   #root 'todos#index'
