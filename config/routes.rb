@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :models
   resources :products
   resources :products
+  resources :sessions
   get 'sessions/new'
 
   resources :users

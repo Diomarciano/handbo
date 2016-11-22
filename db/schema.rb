@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122134016) do
+ActiveRecord::Schema.define(version: 20161122210828) do
 
   create_table "blogs", force: :cascade do |t|
     t.text     "title"
@@ -98,12 +98,8 @@ ActiveRecord::Schema.define(version: 20161122134016) do
     t.decimal  "price"
     t.string   "description"
     t.string   "stadt"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "subscribes", force: :cascade do |t|
@@ -113,11 +109,11 @@ ActiveRecord::Schema.define(version: 20161122134016) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "weight_classes", id: false, force: :cascade do |t|
