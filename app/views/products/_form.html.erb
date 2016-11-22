@@ -10,64 +10,83 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :product_id %><br>
-    <%= f.text_field :product_id %>
+  <form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <div class="field">
+          <%= f.label :item %><br>
+          <%= f.text_field :item,class:"form-control" %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :sku %><br>
-    <%= f.text_field :sku %>
   </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
+  <div class="form-group">
+    <div class="row">
+     <div class="col-md-2 col-md-offset-1"> 
+       <%= f.label :subitem %><br>
+       <%= f.text_field :subitem,class:"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <%= f.file_field :photo %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="container">
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date'>
+                <span class="input-group-addon">
+                  <%= f.label :from %>
+                  <%= f.datetime_select :from,id:'datetimepicker1'%>
+                </span>
+            </div>
+        </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :shipping %><br>
-    <%= f.number_field :shipping %>
+  <div class="container">
+    <div class='col-md-5'>
+        <div class="form-group">
+            <div class='input-group date'>
+              <span class="input-group-addon">
+                <%= f.label :until %>
+                <%= f.datetime_select :until,id:'datetimepicker2'%>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div> 
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <%= f.label :price %>
+        <%= f.text_field :price,class:'form-control' %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">      
+        <%= f.label :description %><br>
+        <%= f.text_field :description,class:"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :weight_class_id %><br>
-    <%= f.number_field :weight_class_id %>
-  </div>
-  <div class="field">
-    <%= f.label :length %><br>
-    <%= f.text_field :length %>
-  </div>
-  <div class="field">
-    <%= f.label :width %><br>
-    <%= f.text_field :width %>
-  </div>
-  <div class="field">
-    <%= f.label :height %><br>
-    <%= f.text_field :height %>
-  </div>
-  <div class="field">
-    <%= f.label :length_class_id %><br>
-    <%= f.text_field :length_class_id %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.number_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :viewed %><br>
-    <%= f.number_field :viewed %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <%= f.label :stadt %><br>
+        <%= f.text_field :stadt,class:"form-control" %>
+      </div>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</form>
 <% end %>

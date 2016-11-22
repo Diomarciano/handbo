@@ -1,4 +1,4 @@
-<html ng-app="spicyApp1">
+<html>
 <head>
 </head>
 <body>
@@ -10,16 +10,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
       </button>
       <a class="navbar-brand" href="#">Logo</a>
+      
+        
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li class="first" role="presentation">
-          <a id="register-tab" href="#" aria-label="Registration form" role="tab" aria-controls="registration-form" aria-selected="false">Register</a>
+          <%= link_to "Register",new_user_path,id:"register-tab" %>
         </li>
         <li class="active" role="presentation">
-          <a id="sign-in-tab" href="#" aria-label="Sign In Form" role="tab" aria-controls="signin-form" data-toggle="modal" data-target="#myModal" aria-selected="true" role="button">Sign in</a>
+          <%= link_to "Sign In", sessions_new_path,id:"sign-in-tab" %>
           </li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>

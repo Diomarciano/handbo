@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114115923) do
+ActiveRecord::Schema.define(version: 20161122130117) do
 
   create_table "blogs", force: :cascade do |t|
     t.text     "title"
@@ -71,22 +71,21 @@ ActiveRecord::Schema.define(version: 20161114115923) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", primary_key: "product_id", force: :cascade do |t|
-    t.string   "sku"
-    t.integer  "quantity"
-    t.string   "image"
+  create_table "products", force: :cascade do |t|
+    t.string   "item"
+    t.string   "subitem"
+    t.binary   "image"
+    t.datetime "from"
+    t.datetime "until"
     t.decimal  "price"
-    t.integer  "shipping"
-    t.decimal  "weight"
-    t.integer  "weight_class_id"
-    t.decimal  "length"
-    t.decimal  "width"
-    t.decimal  "height"
-    t.string   "length_class_id"
-    t.integer  "status"
-    t.integer  "viewed"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "description"
+    t.string   "stadt"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "subscribes", force: :cascade do |t|

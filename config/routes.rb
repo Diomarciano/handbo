@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :products
+  resources :products
+  get 'sessions/new'
+
   resources :users
   get 'blog/index'
   get 'blog/artikel1'
@@ -14,7 +18,6 @@ Rails.application.routes.draw do
 
   resources :weight_classes
   resources :length_classes
-  resources :products
   get 'blog/index'
 
   resources :categories
@@ -32,6 +35,7 @@ Rails.application.routes.draw do
   resources :blogs
   resources :todos
   get 'static_pages/home'
+  
 
 
 
@@ -44,14 +48,21 @@ Rails.application.routes.draw do
   #root 'pages#home'
 
 
-  #root 'welcome#index'
-  root 'blog#index'
+  root 'welcome#index'
+ 
+  #root 'blog#index'
 
   #root 'welcome#index'
   #root 'blog#index'
 
   #root 'blog#index'
 
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#new'
+  get 'register' => 'users#new'
+  post 'register' => 'users#new'
+  get 'createitem' => 'products#new'
+  post 'createitem' => 'products#new'
 
   #root 'todos#index'
 
@@ -62,8 +73,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
+  # 
   # Example resource route with options:
   #   resources :products do
   #     member do
@@ -101,6 +111,5 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     #   end
 end

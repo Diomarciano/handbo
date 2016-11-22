@@ -16,7 +16,7 @@
 //= require angular
 //= require_tree .
 //= require bootstrap-sprockets
-
+//= require date
 
 
 
