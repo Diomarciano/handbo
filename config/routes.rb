@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :models
   resources :products
   resources :products
   get 'sessions/new'
@@ -49,6 +50,7 @@ Rails.application.routes.draw do
 
 
   root 'welcome#index'
+  
  
   #root 'blog#index'
 
