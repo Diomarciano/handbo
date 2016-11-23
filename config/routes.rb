@@ -62,6 +62,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
   get 'register' => 'users#new'
   post 'register' => 'users#new'
   get 'createitem' => 'products#new'

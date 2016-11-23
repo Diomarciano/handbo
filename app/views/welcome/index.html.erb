@@ -19,11 +19,15 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li class="first" role="presentation">
-          <%= link_to "Register",new_user_path,id:"register-tab" %>
+          <%= link_to "Register",register_path,id:"register-tab" %>
         </li>
         <li class="active" role="presentation">
-          <%= link_to "Sign In", sessions_new_path,id:"sign-in-tab" %>
+          <%= link_to "Sign In", login_path,id:"sign-in-tab" %>
           </li>
+          <% if current_user %>
+            Logged in as <%= current_user.email %>.
+            <%= link_to "Log out", logout_path %>
+          <% end %>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>

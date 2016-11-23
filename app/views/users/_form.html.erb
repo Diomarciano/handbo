@@ -2,15 +2,18 @@
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
-      <h2>Form is invalid</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
+          <div class="alert alert-danger" role="alert">
+            <span class="sr-only">Error:</span>
+              <%= message %>
+            </div>
+          <hr>
         <% end %>
       </ul>
     </div>
   <% end %>
-<div class="container">
+<div class="container atas">
       <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-login">
@@ -58,8 +61,8 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <p class="button"><%= f.submit %></p>
-                        <!--<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In"> -->
+                        <%= f.submit "Register",class: "form-control btn-login",id:"login-submit" %></p>
+                       <!-- <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In"> -->
                       </div>
                     </div>
                   </div>
