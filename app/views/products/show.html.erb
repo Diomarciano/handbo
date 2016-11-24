@@ -1,4 +1,14 @@
+
 <div class="alert alert-success" role="alert" id="notice"><%= notice %></div>
+
+  <div class="margin-left">
+    <h4><%= image_tag@product.image.medium.url %> </h4>
+  </div>
+  
+  <section>
+    <span>section</span>
+    <p>Notice we have put a clearfix on the div container. It is not needed in this example, but it would be if the nav element was longer than the non-floated section content.</p>
+  </section>
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
           <h4>Item  :
@@ -7,16 +17,11 @@
     </div>
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
-          <h4>Image :
-          <%= image_tag@product.image.medium.url %> </h4>
-     </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2 col-md-offset-1">
           <h4>from  :
           <%= @product.from %> </h4>
     </div>
   </div>
+
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
           <h4>Until  :
@@ -41,6 +46,7 @@
           <%= @product.stadt %> </h4>
     </div>
   </div>
+  
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
