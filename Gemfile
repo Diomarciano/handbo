@@ -27,6 +27,10 @@ gem 'angularjs-rails', '~> 1.5', '>= 1.5.5'
 #Gem for Bootstrap Helpers
 gem 'bh', '~> 1.2'
 
+#Gem for Image
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
 #Gem for encryption
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
