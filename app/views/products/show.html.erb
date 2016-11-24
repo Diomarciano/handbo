@@ -1,44 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-success" role="alert" id="notice"><%= notice %></div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>Item  :
+          <%= @product.item %> </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>Image :
+          <%= image_tag@product.image.medium.url %> </h4>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>from  :
+          <%= @product.from %> </h4>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>Until  :
+          <%= @product.until %> </h4>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>Price  :
+          <%= @product.price %> </h4>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>Description  :
+          <%= @product.description %> </h4>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+          <h4>City  :
+          <%= @product.stadt %> </h4>
+    </div>
+  </div>
 
-<p>
-  <strong>Item:</strong>
-  <%= @product.item %>
-</p>
-
-<p>
-  <strong>Subitem:</strong>
-  <%= @product.subitem %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @product.image.thumb.url %>
-</p>
-
-<p>
-  <strong>From:</strong>
-  <%= @product.from %>
-</p>
-
-<p>
-  <strong>Until:</strong>
-  <%= @product.until %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Stadt:</strong>
-  <%= @product.stadt %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
