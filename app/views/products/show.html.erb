@@ -5,10 +5,7 @@
     <h4><%= image_tag@product.image.medium.url %> </h4>
   </div>
   
-  <section>
-    <span>section</span>
-    <p>Notice we have put a clearfix on the div container. It is not needed in this example, but it would be if the nav element was longer than the non-floated section content.</p>
-  </section>
+  
     <div class="row">
       <div class="col-md-2 col-md-offset-1">
           <h4>Item  :
@@ -48,6 +45,7 @@
   </div>
   
 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="text-center">
+  <%= link_to 'Save',new_product_path,class:"btn btn-default" %>
+  <%= link_to 'Edit', edit_product_path(@product),class:"btn btn-default" %> 
+</div>
