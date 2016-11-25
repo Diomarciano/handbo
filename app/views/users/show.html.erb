@@ -6,10 +6,6 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+<div class="text-center"><%= link_to 'Create Product', new_product_path,class:"btn btn-default" %> 
