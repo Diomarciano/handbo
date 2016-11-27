@@ -1,5 +1,5 @@
 development:
-  adapter: postgresql
+  adapter: sqlite3
   database: my_database_development
   encoding: unicode
   username: myhandbo
@@ -7,7 +7,7 @@ development:
   pool: 5
   timeout: 5000
 test:
-  adapter: postgresql
+  adapter: sqlite3
   database: my_database_test
   encoding: unicode
   username: myhandbo
