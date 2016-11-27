@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20161122210828) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blogs", force: :cascade do |t|
     t.text     "title"
     t.text     "body"
@@ -79,8 +82,8 @@ ActiveRecord::Schema.define(version: 20161122210828) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "models", ["email"], name: "index_models_on_email", unique: true
-  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
+  add_index "models", ["email"], name: "index_models_on_email", unique: true, using: :btree
+  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true, using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -106,6 +109,14 @@ ActiveRecord::Schema.define(version: 20161122210828) do
     t.text     "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "weight_classes", id: false, force: :cascade do |t|
