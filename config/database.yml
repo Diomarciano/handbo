@@ -1,12 +1,16 @@
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: my_database_development
+  username: myhandbo
+  password: 123456
   pool: 5
   timeout: 5000
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  database: my_database_test
+  username: myhandbo
+  password: 123456
   pool: 5
   timeout: 5000
 
