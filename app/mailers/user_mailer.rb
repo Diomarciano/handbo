@@ -1,5 +1,4 @@
 class UserMailer < ApplicationMailer
- default from: 'confirm@handbo.de'
  
  def welcome_email(user)
     @user = user
