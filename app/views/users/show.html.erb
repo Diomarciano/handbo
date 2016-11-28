@@ -1,11 +1,9 @@
-<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-default">
+ <ul class="nav navbar navbar-right">
+	<%= link_to 'Create Product', new_product_path,class:"btn btn-default navbar-btn" %>
+	
+	<%= link_to 'Logout',logout_path,class:"navbar-text"%>     
+ </ul>
+</nav>
 
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-
-
-<div class="text-center"><%= link_to 'Create Product', new_product_path,class:"btn btn-default" %> 
