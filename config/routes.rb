@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   
   resources :subscribes
   resources :homes
-  resources :blogs
+  resources :blog
   resources :todos
   get 'static_pages/home'
   
@@ -66,9 +66,7 @@ Rails.application.routes.draw do
   post 'register' => 'users#new'
   get 'createitem' => 'products#new'
   post 'createitem' => 'products#new'
-
-  #root 'todos#index'
-
+  get 'blog' => 'blog#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
