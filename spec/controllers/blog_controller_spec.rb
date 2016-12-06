@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe BlogController, type: :controller do
 
-  describe "GET #index" do
+  describe "GET #artikel3" do
     it "returns http success" do
-      get :index
+      get :artikel3
       expect(response).to have_http_status(:success)
     end
   end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'blog/artikel3'
+
   resources :products
   resources :sessions
   get 'sessions/new'

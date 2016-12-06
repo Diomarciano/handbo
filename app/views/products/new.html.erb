@@ -5,11 +5,13 @@
       	<%= link_to '',root_path,class:"glyphicon glyphicon-home" %>
     </ul>
       	<ul class="nav navbar-nav navbar-right">
-      	<span class="glyphicon glyphicon-user" aria-hidden="true">
-
-      		
+      	<span class="glyphicon glyphicon-user space" aria-hidden="true">
+          <%= current_user.email %> 
+          &nbsp; 
       	</span>
-      	<%= link_to '',products_path(@products),class:"glyphicon glyphicon-shopping-cart btn-lg" %>
+
+      	<%= link_to '',products_path(@products),class:"glyphicon glyphicon-shopping-cart" %>
+        &nbsp; &nbsp;&nbsp;
       	<%= link_to 'Logout',logout_path,class:"glyphicon glyphicon-log-out" %>
       </ul>
    
