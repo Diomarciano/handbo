@@ -66,7 +66,8 @@ Rails.application.routes.draw do
   post 'register' => 'users#new'
   get 'createitem' => 'products#new'
   post 'createitem' => 'products#new'
-  get 'blog' => 'blog#index'
+  get 'blog' => 'pages#blog'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

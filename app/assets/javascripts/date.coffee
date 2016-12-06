@@ -1,2 +1,3 @@
-$(document).on "page:change",->
- $('#datetimepicker6').datetimepicker();
+$(document).on "page:change", ->
+  $('#datepicker2').datepicker();
+    

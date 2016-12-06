@@ -36,6 +36,10 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # for angularjs
+  config.assets.digest = false
+
+
   #Install for devise and you should check it
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   

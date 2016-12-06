@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Handbo</title>
+  <title><%= yield(:title) %></title>
 </head>
 <body>
 
@@ -144,6 +144,11 @@
     </div>
   </div>
 </div><br><br>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"><%= link_to "Blog",pages_blog_path %> </p>
+      </div>
+    </footer>
 
     
 

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
@@ -11,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
 
@@ -19,10 +20,13 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
+gem 'jquery-ui-rails', '~> 6.0'
+gem 'angular-ui-bootstrap-rails'
 
 
 #Gem for angularJs
 gem 'angularjs-rails', '~> 1.5', '>= 1.5.5'
+gem 'rails-angular-material'
 
 #Gem for Bootstrap Helpers
 gem 'bh', '~> 1.2'
@@ -33,6 +37,7 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
 #Gem for encryption
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem "bower-rails"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -74,3 +79,5 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+
