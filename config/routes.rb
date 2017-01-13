@@ -68,6 +68,7 @@ Rails.application.routes.draw do
   post 'register' => 'users#new'
   get 'createitem' => 'products#new'
   post 'createitem' => 'products#new'
+  get 'home' => 'pages#home'
   get 'blog' => 'pages#blog'
   
   # Example of regular route:
