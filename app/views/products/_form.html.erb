@@ -1,3 +1,4 @@
+<% provide(:title, 'Create Item') %>
 <%= form_for @product,html: { multipart:true } do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
