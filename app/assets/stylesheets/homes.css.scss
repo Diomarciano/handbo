@@ -8,6 +8,7 @@ h1{
   font-weight:400;
   font-size:32px;
   padding:0px 20px;
+  color:#ffffff;
 }
 
 .atas {
@@ -113,4 +114,39 @@ h1{
 	color: #fff;
 	background-color: #1CA347;
 	border-color: #1CA347;
+}
+#hero1{
+ background:url(https://sojo.net/sites/default/files/blog/simplicity.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+.hero, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.inner{
+  min-height:600px;
+  position: relative;
+}
+
+.hero .inner{
+  background: rgba(0,0,0,0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}
+
+
+.copy{
+  position:absolute; 
+  top:50%; 
+  height:10em; 
+  margin-top:-5em; 
+  width:100%;
+}
+.btn-link{
+  margin:10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight:400;
+  font-size:32px;
+  padding:0px 20px
 }
