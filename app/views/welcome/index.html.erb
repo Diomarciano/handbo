@@ -16,40 +16,60 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-      </button>
-      
-      
-        
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav nav-pills pull-right">
-        <li class="first" role="presentation">
-          <%= link_to "Register",register_path,id:"register-tab" %>
-        </li>
-        <li class="active" role="presentation">
-          <%= link_to "Sign In", login_path,id:"sign-in-tab" %>
-          </li>
-      </ul>
-  </div>
-  </div>
-</nav>
-
 <section id="hero1" class="hero">
   <div class="inner">
     <div class="copy">
     <h1 class="text-center">Semua bisa disewakan</h1>
-      <%= link_to 'Lihat Barang',class:"btn btn-primary" %>
+    <br>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Menyewakan Sesuatu</button>
     </div>
   </div>
 </section>
+
+<!-- Modal register and login -->
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <!--<div class="modal-header">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#register">Register</a></li>
+            <li><a data-toggle="tab" href="#login">Login</a></li>
+          </ul>
+            
+        </div> -->
+
+        <div class="alert alert-info">
+          <strong>Info ! </strong>Kita akan datang segera melayani anda ! 
+        </div>
+       <!-- <div class="modal-body">
+          <div class="tab-content">
+            <%= form_tag("/search",method:"get") do %>
+            <div id="register"class="tab-pane fade in active">
+                <%= label_tag(:name,"Name") %>
+                <%= text_field_tag(:name) %>
+                <%= submit_tag("Search") %>
+              <% end %>
+            </div>
+            <div id="login"class="tab-pane fade">
+              <p>Ini adalah Login</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <h2 class="text-center">Apa yang dikatakan mereka</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -78,7 +98,7 @@
     
     <!-- Container (Services Section) -->
 <div class="container-fluid text-center">
-  <h2>LAYANAN</h2>
+  <h2>LAYANAN SEWA</h2>
   <br>
   <div class="row">
     <div class="col-sm-4">
@@ -100,10 +120,7 @@
   <br><br>
 </div>
 
-<!--footer -->
-    <footer class="footer">
-      <p class="footerfont">info@handbo.de</p>
-    </footer>
+
 
 </body>
 </html>
