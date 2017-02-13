@@ -1,27 +1,87 @@
 
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:title" content="Penyewaan" />
+ <meta property="twitter:title" content="Penyewaan " />
+ <meta property="og:site_name" content="handbo.de" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="Penyewaaan menguntungkan dan murah" />
+ <meta name="description" content="Penyewaan menguntungkan dan murah">
+ <meta property="twitter:description" content="Penyewaan menguntungkan dan murah" />
+ <meta name="author" content=""> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="sewa kamar, sewa villa, sewa, sewa gedung, murah, sewa pasti menguntungkan, hotel murah, paket wisata,  penerbangan, hiburan, sewa mobil, losmen, makanan, restoran, objek wisata, tinjuan, saran, pendapat"/>
+  <meta name="description" content="Sewa pasti menguntungkan" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <ul class="nav navbar-nav navbar-left">
+      <%= link_to '',root_path,class:"glyphicon glyphicon-home btn-lg" %>
+    </ul>
+  </div>
+</nav>
+
 <%= form_for User.new   do |f| %>
 
+<div class="container atas">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <div class="panel-heading">
+          <div class="col-md-3 col-md-offset-3">
+            <h4 class="text-center">Register</h4>
+          </div>
   
-<div class="form-inputs">
+  <div class="form-inputs">
+    <div class="form-group has-success has-feedback">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        <%= f.label :email, class: "sr-only" %>
+        <%= f.text_field(:email, class: "form-control", placeholder: "Email") %>
+    </div>
+  </div>
+  </div>
 
     <div class="form-group has-success has-feedback">
-      <%= f.label :email, class: "sr-only" %>
-      <%= f.text_field(:email, class: "form-control", placeholder: "Email") %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= f.label :password, class: "sr-only" %>
+          <%= f.text_field(:password,type:"password", class: "form-control", placeholder: "Password") %>
+        </div>
+      </div>
     </div>
 
     <div class="form-group has-success has-feedback">
-      <%= f.label :password, class: "sr-only" %>
-      <%= f.text_field(:password,type:"password", class: "form-control", placeholder: "Password") %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= f.label :password, class: "sr-only" %>
+          <%= f.text_field(:password,type:"password", class: "form-control", placeholder: "Ulangi Password") %>
+        </div>
+      </div>
     </div>
-
-    <div class="form-group has-success has-feedback">
-      <%= f.label :password, class: "sr-only" %>
-      <%= f.text_field(:password,type:"password", class: "form-control", placeholder: "Ulangi Password") %>
-    </div>
-
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class=".col-xs-6 .col-sm-4">
+         <div class="text-right">
+            <%= link_to "Sudah Punya Account ?",login_path,id:"register-tab",class:"btn btn-link" %>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
 <% end %>
+</body>
+</html>
