@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     redirect_to pages_home_path, :notice => "Logged in!"
   else
     flash.now.alert = "Invalid email or password"
-    render "new"
+    redirect_to register_path
   end
   end
 
@@ -17,4 +17,15 @@ class SessionsController < ApplicationController
   session[:user_id] = nil
   redirect_to root_url, :notice => "Logged out!"
 end
+  def login
+    user = User.authenticate(params[:email], params[:password])
+  if user
+    session[:user_id] = user.id
+    redirect_to pages_home_path, :notice => "Logged in!"
+  else
+    flash.now.alert = "Invalid email or password"
+    redirect_to register_path
+  end
+  end
+
 end

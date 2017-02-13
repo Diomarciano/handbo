@@ -1,24 +1,33 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <ul class="nav navbar-nav navbar-left">
-        <%= link_to '',root_path,class:"glyphicon glyphicon-home " %>
-    </ul>
-        <ul class="nav navbar-nav navbar-right">
-        <%= link_to '',products_path(@products),class:"glyphicon glyphicon-shopping-cart " %>
-        &nbsp; &nbsp;&nbsp;
-        <%= link_to 'Logout',logout_path,class:"glyphicon glyphicon-log-out" %>
-      </ul>
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:title" content="Penyewaan" />
+ <meta property="twitter:title" content="Penyewaan " />
+ <meta property="og:site_name" content="handbo.de" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="Penyewaaan menguntungkan dan murah" />
+ <meta name="description" content="Penyewaan menguntungkan dan murah">
+ <meta property="twitter:description" content="Penyewaan menguntungkan dan murah" />
+ <meta name="author" content=""> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= yield(:title) %></title>
+  <meta name="keywords" content="sewa kamar, sewa villa, sewa, sewa gedung, murah, sewa pasti menguntungkan, hotel murah, paket wisata,  penerbangan, hiburan, sewa mobil, losmen, makanan, restoran, objek wisata, tinjuan, saran, pendapat"/>
+  <meta name="description" content="Sewa pasti menguntungkan" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+  <%= render 'layouts/header' %>
 
-<h1>Listing Products</h1>
+<p class="text-center">Daftar Sewaan</p>
 
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
       <th>Item</th>
       <th>Subitem</th>
-      <th>Image</th>
       <th>From</th>
       <th>Until</th>
       <th>Price</th>
@@ -33,7 +42,6 @@
       <tr>
         <td><%= product.item %></td>
         <td><%= product.subitem %></td>
-        <td><%= product.image %></td>
         <td><%= product.from %></td>
         <td><%= product.until %></td>
         <td><%= product.price %></td>
@@ -41,11 +49,12 @@
         <td><%= product.stadt %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Anda ingin hapus ?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

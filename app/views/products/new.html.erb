@@ -1,25 +1,26 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <ul class="nav navbar-nav navbar-left">
-      	<%= link_to '',root_path,class:"glyphicon glyphicon-home" %>
-    </ul>
-      	<ul class="nav navbar-nav navbar-right">
-      	
-      	<%= link_to '',products_path,class:"glyphicon glyphicon-shopping-cart" %>
-        &nbsp; &nbsp;&nbsp;
-      	<%= link_to 'Logout',logout_path,class:"glyphicon glyphicon-log-out" %>
-      </ul>
-   
-</div>
-</nav>  
-
-<div class="row">
-    <div class="col-md-2 col-md-offset-1">
-		<h1>New Product</h1>
-	</div>
-</div>
-
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:title" content="Penyewaan" />
+ <meta property="twitter:title" content="Penyewaan " />
+ <meta property="og:site_name" content="handbo.de" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="Penyewaaan menguntungkan dan murah" />
+ <meta name="description" content="Penyewaan menguntungkan dan murah">
+ <meta property="twitter:description" content="Penyewaan menguntungkan dan murah" />
+ <meta name="author" content=""> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= yield(:title) %></title>
+ <meta name="keywords" content="sewa kamar, sewa villa, sewa, sewa gedung, murah, sewa pasti menguntungkan, hotel murah, paket wisata,  penerbangan, hiburan, sewa mobil, losmen, makanan, restoran, objek wisata, tinjuan, saran, pendapat"/>
+  <meta name="description" content="Sewa pasti menguntungkan" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>  
+<%= render 'layouts/header' %>
 <%= render 'form' %>
+</body>
+</html>
 
 

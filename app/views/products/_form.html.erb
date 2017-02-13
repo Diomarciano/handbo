@@ -1,22 +1,20 @@
 <% provide(:title, 'Create Item') %>
-<%= form_for @product,html: { multipart:true } do |f| %>
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<html>
+<head>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag  'application'  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-      <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+
+<%= form_for Product.new do |f| %>
   <form>
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 col-md-offset-1">
+      <div class="col-xs-6 .col-sm-4 sideleft">
         <div class="field">
-          <%= f.label :item %><br>
+          <%= f.label :"Nama Barang" %><br>
           <%= f.text_field :item,class:"form-control" %>
         </div>
       </div>
@@ -25,81 +23,69 @@
   </div>
   <div class="form-group">
     <div class="row">
-     <div class="col-md-2 col-md-offset-1"> 
-       <%= f.label :subitem %><br>
-       <%= f.text_field :subitem,class:"form-control" %>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-md-2 col-md-offset-1">
-        <%= f.label :image %>
-        <%= f.file_field :image %>
+      <div class="col-xs-6 .col-sm-4 sideleft">
+        <%= f.label :"Rp Harga Sewa Per Hari" %>
+        <%= f.text_field :price,class:'form-control',id:"inputrupiah" %>
+
       </div>
     </div>
   </div>
   <div class="container">
-    <div class='col-md-5'>
+    <div class='col-xs-6 .col-sm-4 sideleft1'>
         <div class="form-group">
             <div class='input-group date'>
                 <span class="input-group-addon">
-                  <%= f.label :from %>
+                  <%= f.label :"Tanggal Sewa" %>
                   <%= f.datetime_select :from,id:'datetimepicker1'%>
                 </span>
             </div>
         </div>
     </div>
-  </div>
-  <div class="container">
-    <div class='col-md-5'>
-        <div class="form-group">
-            <div class='input-group date'>
-              <span class="input-group-addon">
-                <%= f.label :until %>
-                <%= f.datetime_select :until,id:'datetimepicker2'%>
-                </span>
-            </div>
-        </div>
-    </div>
-    </div> 
+  </div> 
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 col-md-offset-1">
-        <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
-        <%= f.label :price %>
-        <%= f.text_field :price,class:'form-control' %>
-
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="row">
-      <div class="col-md-2 col-md-offset-1">      
-        <%= f.label :description %><br>
+      <div class="col-xs-6 .col-sm-4 sideleft">      
+        <%= f.label :"Penjelasan Barang" %><br>
         <%= f.text_field :description,class:"form-control" %>
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 col-md-offset-1">
-        <%= f.label :stadt %><br>
+     <div class="col-xs-6 .col-sm-4 sideleft"> 
+       <%= f.label :"No.Handphone" %><br>
+       <%= f.text_field :subitem,class:"form-control" %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6 .col-sm-4 sideleft">
+        <%= f.label :Kota %><br>
         <%= f.text_field :stadt,class:"form-control" %>
       </div>
     </div>
   </div>
   <div class="form-group">
+    <div class="row">
+      <div class="col-xs-6 .col-sm-4 sideleft">
+        <%= f.label :Gambar %>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
   <div class="row">
-  <div class="col-md-2 col-md-offset-1">
+  <div class="col-xs-6 .col-sm-4 sideleft">
   <div class="actions">
-    <%= f.submit "Submit",class:"btn btn-primary" %>
+    <%= f.submit "Pratinjau",class:"btn btn-default" %>
   </div>
 </div>
 </div>
 </div>
 </form>
 <% end %>
-
+</body>
+</html>
 
 

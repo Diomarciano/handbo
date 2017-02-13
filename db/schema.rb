@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161128200043) do
+ActiveRecord::Schema.define(version: 20170210075012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 20161128200043) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "permintaans", force: :cascade do |t|
+    t.string   "barang"
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
@@ -85,6 +92,18 @@ ActiveRecord::Schema.define(version: 20161128200043) do
     t.string   "stadt"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "nama"
+    t.integer  "nomor"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.string   "kota"
+    t.float    "price"
+    t.string   "new"
+    t.string   "show"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subscribes", force: :cascade do |t|
@@ -101,6 +120,8 @@ ActiveRecord::Schema.define(version: 20161128200043) do
     t.datetime "updated_at",      null: false
     t.boolean  "email_confirmed"
     t.string   "confirm_token"
+    t.string   "nama"
+    t.integer  "nomor"
   end
 
   create_table "weight_classes", id: false, force: :cascade do |t|

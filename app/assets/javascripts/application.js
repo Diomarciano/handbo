@@ -20,4 +20,4 @@
 //= require jquery-ui/widgets/datepicker
 //= require jquery_ujs
 //= require ./date/datepicker
-
+//= require rupiah

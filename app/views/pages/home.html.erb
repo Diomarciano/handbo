@@ -1,108 +1,26 @@
-<% provide(:title, 'Home') %>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:title" content="Penyewaan" />
+ <meta property="twitter:title" content="Penyewaan " />
+ <meta property="og:site_name" content="handbo.de" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="Penyewaaan menguntungkan dan murah" />
+ <meta name="description" content="Penyewaan menguntungkan dan murah">
+ <meta property="twitter:description" content="Penyewaan menguntungkan dan murah" />
+ <meta name="author" content=""> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= yield(:title) %></title>
+  <meta name="keywords" content="sewa kamar, sewa villa, sewa, sewa gedung, murah, sewa pasti menguntungkan, hotel murah, paket wisata,  penerbangan, hiburan, sewa mobil, losmen, makanan, restoran, objek wisata, tinjuan, saran, pendapat"/>
+  <meta name="description" content="Sewa pasti menguntungkan" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+<%= render 'layouts/header' %>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-      <ul class="nav navbar-nav navbar-right">
-        <%= link_to '',products_path,class:"glyphicon glyphicon-shopping-cart" %>
-        &nbsp; &nbsp;&nbsp;
-        <%= link_to 'Logout',logout_path,class:"glyphicon glyphicon-log-out" %>
-      </ul>
-  </div>
-</nav>
-
-      <hr>
-  
-        <div class="input-group input-group-sm">
-          <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3"/>
-        </div>
-        <br>
-        <div class="input-group input-group-sm">
-         <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon3">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Sign In</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container text-center">
-  <div class="row">
-    <div class=".col-xs-6 .col-md-4">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="what are you borrowing for ?">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Search</button>
-      </span>
-    </div>
-    </div>
-  </div>
-</div>
-<br>
-
-<div class="container">
-  <div class="row">
-
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="http://store.storeimages.cdn-apple.com/4662/as-images.apple.com/is/image/AppleInc/aos/published/images/M/AC/MACBOOKPRO/MACBOOKPRO?wid=1200&hei=630&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=6xyk93" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 12 December 2016</div>
-        <div class="panel-footer">Until : 12 December 2016</div>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="http://cdn2.carbuyer.co.uk/sites/carbuyer_d7/files/audi-rs7-cutout_0.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 25 November 2016</div>
-        <div class="panel-footer">Until : 30 November 2016</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="http://i.auto-bild.de/ir_img/1/2/7/8/2/4/4/Apple-Watch-und-BMW-Das-Auto-am-Handgelenk-1200x800-27b6f2b372a9150b.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 1 Agustus 2016 </div>
-        <div class="panel-footer">Until : 30 November 2016</div>
-      </div>
-    </div>
-  </div>
-</div><br>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="http://www.notebookcheck.com/fileadmin/_migrated/pics/lenovo_thinkpad_x100e_gesamt02_01.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 17 Agustus 2016</div>
-        <div class="panel-footer">Until : 2 December 2016</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="http://stylespion.de/wp-content/uploads/2009/01/wohnung.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 15 December 2016</div>
-        <div class="panel-footer">Until : 17 December 2016</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">For Rent</div>
-        <div class="panel-body"><img src="https://www.mydukkan.com/media/image/19256/Cordoba.CordobaC5CE.Naturel28408.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">From : 3 December 2016</div>
-        <div class="panel-footer">Until : 15 December 2016</div>
-      </div>
-    </div>
-  </div>
-</div><br><br>
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted"><%= link_to "Blog",pages_blog_path %> </p>
-      </div>
-    </footer>
+<%= render 'products/form' %>
+</body>
+</html>
+      

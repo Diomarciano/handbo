@@ -22,6 +22,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
 gem 'jquery-ui-rails', '~> 6.0'
 gem 'angular-ui-bootstrap-rails'
+gem 'bootstrap_form', '~> 2.5', '>= 2.5.3'
 
 
 #Gem for angularJs
