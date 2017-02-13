@@ -1,0 +1,108 @@
+<% provide(:title, 'Home') %>
+
+
+<section id="hero1" class="hero">
+  <div class="inner">
+    <div class="copy">
+    <h1 class="text-center">Semua bisa disewakan</h1>
+    <br>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Gratis Sewa</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal register and login -->
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#register">Register</a></li>
+            <li><a data-toggle="tab" href="#login">Login</a></li>
+          </ul>
+            
+        </div> 
+
+        
+       <div class="modal-body">
+          <div class="tab-content">
+            <div id="register"class="tab-pane fade in active">  
+               <div class="form-group">
+                  <div class="row">
+                  <div class="col-md-6 col-md-offset-3">
+                    <%= render 'users/form' %> 
+                  </div>
+                  </div>
+                  </div>
+
+            </div>
+            <div id="login"class="tab-pane fade">
+              <%= render template: 'sessions/login' %>
+            </div>
+          </div>
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<h2 class="text-center">Apa yang dikatakan mereka</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Sesuai dengan kebutuhan masyarakat"<br><span style="font-style:normal;">David Alexander, Head of Business Development, Amazon</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Satu Kata... WOW!!"<br><span style="font-style:normal;">Terence Teo, Investment Manager, EDBI</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Ini harus dieksekusi dengan baik akan menghasilkan produk yg digunakan masyarakat"<br><span style="font-style:normal;">Philipp Stangl, Managing Director , Venture Capital of Pioneer</span></h4>
+      </div>
+    </div>
+
+    
+  </div>
+
+    
+    <!-- Container (Services Section) -->
+<div class="container-fluid text-center">
+  <h2>LAYANAN SEWA</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>AMAN</h4>
+      <p>Transaksi di Handbo di jamin aman dan terpercaya</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Ramah Lingkungan</h4>
+      <p>Kita menggunakan produk yang sudah tersedia </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd logo-small"></span>
+      <h4>Menguntungkan</h4>
+      <p>Murah</p>
+    </div>
+  </div>
+  <br><br>
+</div>

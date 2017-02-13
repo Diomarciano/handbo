@@ -1,0 +1,58 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta property="og:title" content="Penyewaan" />
+ <meta property="twitter:title" content="Penyewaan " />
+ <meta property="og:site_name" content="handbo.de" />
+ <meta property="og:type" content="website" />
+ <meta property="og:description" content="Penyewaaan menguntungkan dan murah" />
+ <meta name="description" content="Penyewaan menguntungkan dan murah">
+ <meta property="twitter:description" content="Penyewaan menguntungkan dan murah" />
+ <meta name="author" content=""> 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= yield(:title) %></title>
+  <meta name="keywords" content="sewa kamar, sewa villa, sewa, sewa gedung, murah, sewa pasti menguntungkan, hotel murah, paket wisata,  penerbangan, hiburan, sewa mobil, losmen, makanan, restoran, objek wisata, tinjuan, saran, pendapat"/>
+  <meta name="description" content="Sewa pasti menguntungkan" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+  
+
+<p class="text-center">Daftar Sewaan</p>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Subitem</th>
+      <th>From</th>
+      <th>Until</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Stadt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.item %></td>
+        <td><%= product.subitem %></td>
+        <td><%= product.from %></td>
+        <td><%= product.until %></td>
+        <td><%= product.price %></td>
+        <td><%= product.description %></td>
+        <td><%= product.stadt %></td>
+        <td><%= link_to 'Show', sewa_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
