@@ -21,3 +21,4 @@
 //= require jquery_ujs
 //= require ./date/datepicker
 //= require rupiah
+//= require modal
