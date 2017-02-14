@@ -71,7 +71,10 @@ Rails.application.routes.draw do
   get 'home' => 'pages#home'
   get 'blog' => 'pages#blog'
   get 'lihat' => 'products#lihat'
+  post 'lihat' => 'products#lihat'
   get 'sewa' => 'products#validasi'
+  post 'sewa' => 'products#validasi'
+
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
