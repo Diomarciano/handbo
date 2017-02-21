@@ -74,6 +74,9 @@ Rails.application.routes.draw do
   post 'lihat' => 'products#lihat'
   get 'sewa' => 'products#validasi'
   post 'sewa' => 'products#validasi'
+  get 'transaksi' => 'products#penawaran'
+  
+
 
   
   # Example of regular route:

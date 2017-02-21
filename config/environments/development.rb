@@ -42,6 +42,9 @@ Rails.application.configure do
 
   #Install for devise and you should check it
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #for paperclip
+  Paperclip.options[:command_path] = "/usr/local/bin/"
   
 
   # Raises error for missing translations

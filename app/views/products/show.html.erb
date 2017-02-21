@@ -23,7 +23,7 @@
   
 
   <div class="col-xs-6 .col-sm-4 sideleft">
-    <h4><%= image_tag@product.image.medium.url %> </h4>
+    <h4><%= image_tag@product.image(:medium) %> </h4>
   </div>
   <div class="row">
       <div class="col-xs-6 .col-sm-4 sideleft">
@@ -69,7 +69,7 @@
   
 
 <div class="text-center">
-  <%= link_to 'Kirim',products_path,class:"btn btn-default" %>
+  <%= link_to 'Kirim',products_path,class:"btn btn-default" %>  
   <%= link_to 'Tambah Product',new_product_path,class:"btn btn-default" %>
 </div>
 </body>

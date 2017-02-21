@@ -9,6 +9,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :price
       t.string :description
       t.string :stadt
+      t.attachment :image
 
       t.timestamps null: false
     end

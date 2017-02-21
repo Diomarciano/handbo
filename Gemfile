@@ -23,6 +23,11 @@ gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
 gem 'jquery-ui-rails', '~> 6.0'
 gem 'angular-ui-bootstrap-rails'
 gem 'bootstrap_form', '~> 2.5', '>= 2.5.3'
+gem 'tire', '~> 0.6.2'
+gem 'tire-contrib', '~> 0.1.3'
+gem 'elasticsearch', '~> 5.0', '>= 5.0.3'
+gem 'paperclip', '~> 5.1'
+
 
 
 #Gem for angularJs

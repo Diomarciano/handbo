@@ -37,6 +37,14 @@
     </tr>
   </thead>
 
+  
+  <% if @products.any? %>
+   <% @products.each do |product| %>
+        <h4><%= image_tag product.image(:medium) %> </h4>
+   <% end %>
+<% end %>
+  
+
   <tbody>
     <% @products.each do |product| %>
       <tr>
@@ -47,6 +55,9 @@
         <td><%= product.price %></td>
         <td><%= product.description %></td>
         <td><%= product.stadt %></td>
+       
+
+        
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Anda ingin hapus ?' } %></td>

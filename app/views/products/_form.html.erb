@@ -1,14 +1,7 @@
-<% provide(:title, 'Create Item') %>
-<html>
-<head>
-<%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag  'application'  %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
 
-<%= form_for Product.new do |f| %>
+
+<%= form_for Product.new , html: { multipart: true } do |f| %>
   <form>
   <div class="form-group">
     <div class="row">

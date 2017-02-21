@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
   def show
     
   end
+  def search
+  end
   def lihat
     @products = Product.all
   end    
@@ -24,7 +26,11 @@ class ProductsController < ApplicationController
   end
 
   def validasi
-    render :validasi
+    @products = Product.all
+  end
+  
+  def penawaran
+    @products = Product.all
   end
 
   # GET /products/1/edit
@@ -61,6 +67,8 @@ class ProductsController < ApplicationController
     end
   end
 
+  
+
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
@@ -79,6 +87,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:item, :subitem, :image, :from, :until, :price, :description, :stadt)
+      params.require(:product).permit(:item, :subitem,:image, :from, :until, :price, :description, :stadt,:image)
     end  
 end
